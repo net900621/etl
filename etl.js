@@ -1,8 +1,8 @@
-var etj = function (id, data) {
+var etj = function (str, data) {
 	var reg = /^<%.*?%>/,
 	    reg2 = /[^<^%*]/,
 	    str2 = 'var str = "";',
-	    str = document.getElementById(id).innerHTML.replace(/[\r\t\n]/g, " ");
+	    str = str.replace(/[\r\t\n]/g, " ");
 	while (str.length) {
 	    if (match = reg.exec(str)) {
 	        if (/^<%=/.exec(str)) {
